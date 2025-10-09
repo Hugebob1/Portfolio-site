@@ -9,6 +9,8 @@ function setDelays(open) {
   });
 }
 
+$("h1").fadeOut(1).fadeIn(2000);
+
 menu.addEventListener('click', () => {
   const opening = bar.hidden || !bar.classList.contains('open');
 
@@ -35,3 +37,35 @@ menu.addEventListener('click', () => {
     bar.addEventListener('transitionend', onEnd, true);
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlMap = {
+    "Graph Splitter": "https://github.com/Hugebob1/GrafMasterJava",
+    "Flash Cards": "https://github.com/Hugebob1/FlashCardApp",
+    "OLX Scanner": "https://github.com/Hugebob1/Olx_Scanner",
+    "Desk Master": "https://github.com/Hugebob1/DeskMaster",
+    "MyChat": "https://github.com/Hugebob1/MyChat",
+    "ML": "https://github.com/Hugebob1/ML-project"
+  };
+
+  document.querySelectorAll('.container .card').forEach(card => {
+    const h1 = card.querySelector('h1');
+    const url = h1 && urlMap[h1.textContent.trim()];
+    if (!url) return;
+
+    card.style.cursor = 'pointer';
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+
+    const go = () => { window.location.href = url; };
+
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return; 
+      go();
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+});
+

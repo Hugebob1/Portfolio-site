@@ -7,6 +7,10 @@
   margin: 3rem 0 2rem 0;
   font-size: 1.5rem;
 }
+.title p{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
 .bar[hidden] {
   display: none;                 
 }
@@ -46,7 +50,7 @@
   user-select: none;
 }
 .bar.open .btn {
-  transform: translateX(0);            /* slide into place */
+  transform: translateX(0);            
   opacity: 1;
   pointer-events: auto;
 }
