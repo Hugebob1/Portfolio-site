@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+}
+html{
+  font-family: Poppins;
+  color: #f0f0f0;
+}
+body{
+  min-height: 100vh;
+  background: #0b0d15;
+  color: #a2a5b3;
+  align-content: center;
+}
+h1{
+  color: white;
+}
+.card{
+  margin: 0 auto;
+  padding: 2em;
+  width: 380px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #00ffdd, #2bff0000, #5a01ff, #33fd0000, #00fddb);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 5s spin linear infinite;
+  transition: opacity 1.5s ease 10ms;
+}
+.card::before{
+  filter: blur(1.8rem);
+  opacity: 0.5;
+}
+.card:hover::before,
+.card:hover::after{
+  opacity: 0.2;
+}
+.card:hover::after,
+.card:hover::before{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+@media (min-width: 1250px) and (max-width: 1400px){
+    .card{
+      width: 300px;
+    }
+    .card::after, .card::before{
+      background-image: conic-gradient(from var(--angle), #000000, #000000, #000000, #ff1d1d, #002efd);
+    }
+}
+@media (min-width: 830px) and (max-width: 1249px){
+    .card{
+      width: 300px;
+    }
+    .container{
+      grid-template-columns: 1fr 1fr;
+    }
+    .card::after, .card::before{
+      background-image: conic-gradient(from var(--angle), #ff0000, #000000, #000000, #000000, #ff0000);
+    }
+    .card::before{
+      filter: blur(2.8rem);
+      opacity: 0.6;
+    }
+}
+@media (min-width: 319px) and (max-width: 829px){
+    .card{
+      width: 300px;
+    }
+    .container{
+      grid-template-columns: 1fr;
+    }
+    .card::after, .card::before{
+      background-image: conic-gradient(from var(--angle), #ffffff, #c300ff, #b700ff, #000000, #ffffff);
+    }
+    .card::before{
+      filter: blur(1.8rem);
+      opacity: 0.4;
+    }
+}
