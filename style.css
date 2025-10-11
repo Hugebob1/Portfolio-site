@@ -140,6 +140,21 @@ h1{
     --angle: 360deg;
   }
 }
+@media (min-width: 2000px) {
+    .card{
+      width: 450px;
+    }
+    img{
+      width: 200px;
+      height: 200px;
+    }
+    .inline p{
+      font-size: 1.2rem;
+    }
+    .card::after, .card::before{
+      background-image: conic-gradient(from var(--angle), #00ffd5, #cc00ff, #ffffff, #cc00ff, #00ffd5);
+    }
+}
 @media (min-width: 1250px) and (max-width: 1500px){
     .card{
       width: 300px;
