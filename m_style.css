@@ -192,3 +192,57 @@ main{
     transition: 0.5s ease;
     cursor: pointer;
 }
+.bubble{
+    position: absolute;
+    top: 8%;
+    right: -20%;
+    scale: 0.9;
+}
+@media (max-width: 1300px){
+    header{
+        padding: 1rem 0.5rem;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .bubble{
+        scale: 0.6;
+        top: -12%;
+        right: 1%;
+    }
+
+}
+@media (max-width: 800px){
+    header{
+        padding: 1rem 0.1rem;
+    }
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .btn-signing{
+        padding: 0.6rem 1.5rem;
+    }
+    .content{
+        margin-top: 25rem;
+    }
+    .bubble{
+        scale: 0.4;
+        top: -20%;
+    }
+    .a-box-link{
+        width: 11rem;
+    }
+    .a-box-git{
+        width: 11rem;
+    }
+    .content h1{
+        font-size: 3.5rem;
+    }
+    .content p{
+        font-size: 1.1rem;
+        padding-right: 2.3rem;
+    }
+}
