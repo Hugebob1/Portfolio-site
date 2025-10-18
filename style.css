@@ -3,6 +3,45 @@
   padding: 0;  
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.layer-blur{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    box-shadow: 0 0 700px 20px #ff00c8;
+    rotate: 30deg;
+    z-index: -1;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1.45fr;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+}
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+nav{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-left: -5%;
+}
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover{
+    color: #ff00c8;
+    opacity: 0.8;
+}
 .title{
   text-align: center;
   margin: 3rem 0 2rem 0;
@@ -93,7 +132,7 @@ h1{
   margin: 0 auto;
   padding: 2em;
   width: 380px;
-  background: #1c1f2b;
+  background:   #121827;
   text-align: center;
   border-radius: 10px;
   position: relative;
@@ -104,13 +143,26 @@ h1{
   initial-value: 0deg;
   inherits: false;
 }
-
+.btn-signing{
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.btn-signing:hover{
+    background-color: white;
+}
 .card::after, .card::before{
   content: '';
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), #00ffdd, #2bff0000, #5a01ff, #33fd0000, #00fddb);
+  background-image: conic-gradient(from var(--angle), #00ffd5, #cc00ff, #ffffff, #cc00ff, #00ffd5);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -126,12 +178,36 @@ h1{
 }
 .card:hover::before,
 .card:hover::after{
+  
   opacity: 0.2;
 }
 .card:hover::after,
 .card:hover::before{
   animation-play-state: paused;
   cursor: pointer;
+}
+.card h1 {
+  font-size: 2.1rem;             
+  transition: transform 450ms ease, color 450ms ease;
+  display: inline-block;          
+  transform-origin: center;
+}
+/* stan początkowy – niewidoczne i lekko przesunięte */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  will-change: opacity, transform;
+}
+
+/* po aktywacji – płynne wejście */
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover h1 {
+  transform: scale(1.0776);  
+  color: #ff00f2;     
 }
 @keyframes spin{
   from{
@@ -142,8 +218,31 @@ h1{
   }
 }
 @media (min-width: 2000px) {
+
+    .layer-blur{
+      height: 0;
+      width: 35rem;
+      position: absolute;
+      top: 20%;
+      left: 0;
+      box-shadow: 0 0 700px 20px #ff00c8;
+      rotate: 30deg;
+      z-index: -1;
+      margin: 0;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1.1fr 1.45fr;
+        align-items: center;
+        padding: 2rem 5rem;
+        margin: 5rem 3rem;
+        z-index: 999;
+    }
     .card{
       width: 450px;
+    }
+    nav{
+      gap: 3.3rem;
     }
     img{
       width: 200px;
@@ -160,20 +259,26 @@ h1{
     .card{
       width: 300px;
     }
-    .card::after, .card::before{
-      background-image: conic-gradient(from var(--angle), #000000, #000000, #000000, #ff1d1d, #002efd);
+    nav{
+      gap: 2.2rem;
     }
+    /* .card::after, .card::before{
+      background-image: conic-gradient(from var(--angle), #000000, #000000, #000000, #ff1d1d, #002efd);
+    } */
 }
 @media (min-width: 830px) and (max-width: 1249px){
     .card{
       width: 300px;
     }
+    nav{
+      gap: 2rem;
+    }
     .container{
       grid-template-columns: 1fr 1fr;
     }
-    .card::after, .card::before{
+    /* .card::after, .card::before{
       background-image: conic-gradient(from var(--angle), #ff0000, #000000, #000000, #000000, #ff0000);
-    }
+    } */
     .card::before{
       filter: blur(2.8rem);
       opacity: 0.6;
@@ -182,6 +287,9 @@ h1{
 @media (min-width: 319px) and (max-width: 829px){
     .card{
       width: 300px;
+    }
+    nav{
+      gap: 1.8rem;
     }
     .container{
       grid-template-columns: 1fr;

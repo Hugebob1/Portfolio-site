@@ -119,7 +119,11 @@ main{
 }
 .tag-box .tag:hover{
     color: #7200dd;
-    background-color: #1e0022;
+    /* background-color: #1e0022; */
+}
+.tag-projects{
+    text-decoration: none;
+    color: inherit;
 }
 .content h1{
     font-size: 4rem;
@@ -169,7 +173,11 @@ main{
     font-weight: 600;
     letter-spacing: 0.1em;
     color: rgb(146, 3, 146);
+    transition: 2s ease;
 } 
+.btn-get-started:hover{
+    color: #ff00ff;
+}
 .a-box-git .btn-get-started{
     position: absolute;
     inset: 3px 3px 3px 3px;

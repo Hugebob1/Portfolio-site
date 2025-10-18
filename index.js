@@ -1,3 +1,14 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+  const items = Array.from(document.querySelectorAll('.reveal-item'));
+  items.forEach((el, i) => {
+    setTimeout(() => el.classList.add('is-visible'), i * 150); 
+  });
+});
+
+
+
+
 const bar   = document.getElementById('bar');
 const menu  = document.getElementById('menu'); 
 const items = [...bar.querySelectorAll('.btn')];
