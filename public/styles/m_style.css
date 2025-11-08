@@ -1,0 +1,289 @@
+html, body { overflow-y: hidden; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  --footer-h: 60px; 
+}
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #0b0d15;
+    color: #e7e7e7; 
+    min-height: calc(100vh - var(--footer-h));
+    line-height: 1.5;
+}
+.image-gradient{
+    position:absolute;
+    top:0;
+    right:0;
+    opacity: 0.5;
+    z-index: -1;
+}footer{
+    height: var(--footer-h);
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+}
+.layer-blur{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 20px #ff00c8;
+    rotate: -30deg;
+    z-index: -1;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+}
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+header h1.show {
+    opacity: 1;
+    transform: none;
+}
+nav{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-left: -5%;
+}
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: color .3s ease, opacity .3s ease, transform .3s ease;
+}
+header nav a.is-visible {
+    opacity: 1;
+    transform: none;
+}
+nav a:hover{
+    color: #ff00c8;
+    opacity: 0.8;
+}
+.btn-signing{
+    
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.btn-signing.show{
+    opacity: 1;
+    transform: none;
+}
+.btn-signing:hover{
+    background-color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+.tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #9439d1, #6600c5, #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 3s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+@keyframes animationGradient{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 200%;
+    }
+}
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tag-box .tag:hover{
+    color: #7200dd;
+    /* background-color: #1e0022; */
+}
+.tag-projects{
+    text-decoration: none;
+    color: inherit;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.4);
+}
+.description{
+    font-size:  1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+.buttons{
+    display:flex;
+    gap: 1rem;
+}
+.a-box-git{
+    margin: 1rem 0;
+    position: relative;
+    width: 13rem;
+    height: 2.7rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #430070, #000000, #4c0053, #cf00cf, #b3b3b3, #430070);
+    background-size: 200%;
+    animation: animationGradient 5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.a-box-link{
+    margin: 1rem 0;
+    position: relative;
+    width: 13rem;
+    height: 2.7rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #9342c9, #575757, #75127e, #ff28ff, #000000, #9342c9);
+    background-size: 200%;
+    animation: animationGradient 5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.btn-get-started{
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: rgb(146, 3, 146);
+    transition: 2s ease;
+} 
+.btn-get-started:hover{
+    color: #ff00ff;
+}
+.a-box-git .btn-get-started{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.a-box-link .btn-get-started{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.bubble{
+    position: absolute;
+    top: 8%;
+    right: -20%;
+    scale: 0.9;
+}
+@media (max-width: 1300px){
+    html, body { overflow-y: auto; }
+    header{
+        padding: 1rem 0.5rem;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .bubble{
+        scale: 0.6;
+        top: -12%;
+        right: 1%;
+    }
+
+}
+@media (max-width: 800px){
+    html, body { overflow-y: auto; }
+    header{
+        padding: 1rem 0.1rem;
+    }
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .btn-signing{
+        padding: 0.6rem 1.5rem;
+    }
+    .content{
+        margin-top: 25rem;
+    }
+    .bubble{
+        scale: 0.4;
+        top: -20%;
+    }
+    .a-box-link{
+        width: 11rem;
+    }
+    .a-box-git{
+        width: 11rem;
+    }
+    .content h1{
+        font-size: 3.5rem;
+    }
+    .content p{
+        font-size: 1.1rem;
+        padding-right: 2.3rem;
+    }
+}
