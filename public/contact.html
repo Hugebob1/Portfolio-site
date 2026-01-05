@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ALEXZ</title>
+
+  <!-- GitHub Pages: ścieżki względne -->
+  <link rel="stylesheet" href="./styles/contact.css" />
+</head>
+<body>
+  <img class="image-gradient" src="./images/gradient.png" alt="gradient" />
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <h1 class="logo">ALEXZ</h1>
+
+      <nav>
+        <a href="./main.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./portfolio.html">Projects</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content">
+        <div class="tag-box">
+          <div class="tag">CONTACT &wedbar;</div>
+        </div>
+
+        <h1>LET’S TALK</h1>
+        <p class="description">
+          If you want to collaborate, hire me, or just say hi — feel free to reach out.
+        </p>
+
+        <div class="card">
+          <div class="row">
+            <div class="label">Email</div>
+            <a class="value" id="emailLink" href="mailto:aleksander.zbyrasz@gmail.com">aleksander.zbyrasz@gmail.com</a>
+            <button class="copy" data-copy="aleksander.zbyrasz@gmail.com" aria-label="Copy email">Copy</button>
+          </div>
+
+          <div class="row">
+            <div class="label">Phone</div>
+            <a class="value" id="phoneLink" href="tel:+48606317505">+48 606 317 505</a>
+            <button class="copy" data-copy="+48606317505" aria-label="Copy phone">Copy</button>
+          </div>
+
+          <div class="row">
+            <div class="label">LinkedIn</div>
+            <a class="value" href="https://www.linkedin.com/in/aleksander-zbyrasz-144778365/" target="_blank" rel="noreferrer">
+              linkedin.com/in/aleksander-zbyrasz-144778365
+            </a>
+            <span class="pill">Open</span>
+          </div>
+
+          <div class="row">
+            <div class="label">GitHub</div>
+            <a class="value" href="https://github.com/Hugebob1" target="_blank" rel="noreferrer">
+              github.com/Hugebob1
+            </a>
+            <span class="pill">Open</span>
+          </div>
+
+          <div class="hint" id="hint" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © Alex 2026</p>
+  </footer>
+
+  <script src="./contact.js"></script>
+</body>
+</html>

@@ -1,104 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="/styles/style.css">
+
+  <!-- GitHub Pages: ścieżki względne -->
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
   <div class="layer-blur"></div>
+
   <header>
-            <h1 class="logo">ALEXZ</h1>
+    <h1 class="logo">ALEXZ</h1>
 
-            <nav>
-                <a href="/">Home</a>
-                <a href="about.html">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </nav>
+    <nav>
+      <a href="./main.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="#services">Services</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
 
-            <!-- <button class="btn-signing">TEMP</button> -->
-        </header>
+    <!-- <button class="btn-signing">TEMP</button> -->
+  </header>
 
-  <!-- <p id="menu" class="menu">HOME</p>
+  <div class="reveal container" id="services">
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>Graph Splitter</h1>
+        <div class="inline">
+          <img src="./images/Graph.png" alt="Graph" />
+          <p>Splits the graph into multiple subgraphs and draws each one in a different color.</p>
+        </div>
+      </div>
+    </div>
 
-  <div id="bar" class="bar" hidden>
-    <div class="btn">Home</div>
-    <div class="btn">Shop</div>
-    <div class="btn">About</div>
-    <div class="btn">Contact</div>
-  </div> -->
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>Flash Cards</h1>
+        <div class="inline">
+          <img src="./images/Flash.png" alt="Flash Cards" />
+          <p>FlashCardApp is a clean, beginner-friendly application written in JavaFX that allows users to learn using flashcards loaded from text files.</p>
+        </div>
+      </div>
+    </div>
 
-  
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>OLX Scanner</h1>
+        <div class="inline">
+          <img src="./images/OLX.webp" alt="Olx Logo" />
+          <p>This project allows you to automatically fetch listings from OLX for the Aprilia RS 660 motorcycle, store them in a local SQLite database, and display the data using a simple web interface built with Flask.</p>
+        </div>
+      </div>
+    </div>
 
-  
-  <div class="reveal container">
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>Graph Splitter</h1>
-      <div class="inline">
-        <img src="images/Graph.png" alt="Graph">
-        <p>Splits the graph into multiple subgraphs and draws each one in a different color.</p>
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>Desk Master</h1>
+        <div class="inline">
+          <img src="./images/Desk.png" alt="Desk Master" />
+          <p>This is a Desk Reservation Application built using Python and Flask. The app allows users to register, log in, and reserve desks in an office space.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>MyChat</h1>
+        <div class="inline">
+          <img src="./images/Chat.png" alt="Chat" />
+          <p>
+            Privacy-first chat built with Python/Flask plus a bit of JS/HTML/CSS.
+            Supports email allow-list, two-step verification, encrypted text at rest, image uploads, and voice messages.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap reveal-item">
+      <div class="card">
+        <h1>ML</h1>
+        <div class="inline">
+          <img src="./images/ML.jpg" alt="Machine Learning" />
+          <p>An ML model that turns messy, natural-language transaction descriptions into clean spending categories—using text normalization, tokenization, and merchant lookup features.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>Flash Cards</h1>
-      <div class="inline">
-        <img src="images/Flash.png" alt="Flash Cards">
-        <p>FlashCardApp is a clean, beginner-friendly application written in JavaFX that allows users to learn using flashcards loaded from text files.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>OLX Scanner</h1>
-      <div class="inline">
-        <img src="images/OLX.webp" alt="Olx Logo">
-        <p>This project allows you to automatically fetch listings from OLX for the Aprilia RS 660 motorcycle, store them in a local SQLite database, and display the data using a simple web interface built with Flask.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>Desk Master</h1>
-      <div class="inline">
-        <img src="images/Desk.png" alt="Desk Master">
-        <p>This is a Desk Reservation Application built using Python and Flask. The app allows users to register, log in, and reserve desks in an office space.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>MyChat</h1>
-      <div class="inline">
-        <img src="images/Chat.png" alt="Chat">
-        <p>Privacy-first chat built with Python/Flask plus a bit of JS/HTML/CSS.
-          Supports email allow-list, two-step verification, encrypted text at rest, image uploads, and voice messages.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-wrap reveal-item">
-    <div class="card">
-      <h1>ML</h1>
-      <div class="inline">
-        <img src="images/ML.jpg" alt="Machine Learning">
-        <p>An ML model that turns messy, natural-language transaction descriptions into clean spending categories—using text normalization, tokenization, and merchant lookup features.</p>
-      </div>
-    </div>
-  </div>
-</div>
-  <footer>
-    <p>Copyright © Alex 2024</p>
+  <footer id="contact">
+    <p>Copyright © Alex 2026</p>
   </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="/index.js" charset="utf-8"></script>
+
+  <!-- GitHub Pages: ścieżka względna -->
+  <script src="./index.js" charset="utf-8"></script>
 </body>
 </html>
