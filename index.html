@@ -3,97 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Document</title>
 
-  <!-- GitHub Pages: ścieżki względne -->
-  <link rel="stylesheet" href="./styles/style.css" />
+  <!-- GitHub Pages: używaj ścieżek względnych -->
+  <link rel="stylesheet" href="./styles/m_style.css" />
 </head>
 <body>
+  <img class="image-gradient" src="./images/gradient.png" alt="gradient" />
   <div class="layer-blur"></div>
 
-  <header>
-    <h1 class="logo">ALEXZ</h1>
+  <div class="container">
+    <header>
+      <h1 class="logo">ALEXZ</h1>
 
-    <nav>
-      <a href="./main.html">Home</a>
-      <a href="./about.html">About</a>
-      <a href="#services">Services</a>
-      <a href="./contact.html">Contact</a>
-    </nav>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="#services">Services</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
 
-    <!-- <button class="btn-signing">TEMP</button> -->
-  </header>
+      <button class="btn-signing">SIGNING</button>
+    </header>
 
-  <div class="reveal container" id="services">
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>Graph Splitter</h1>
-        <div class="inline">
-          <img src="./images/Graph.png" alt="Graph" />
-          <p>Splits the graph into multiple subgraphs and draws each one in a different color.</p>
+    <main>
+      <div class="content">
+        <a class="tag-projects" href="./projects.html">
+          <div class="tag-box">
+            <div class="tag">PROJECTS &wedbar;</div>
+          </div>
+        </a>
+
+        <h1>APPLIED <br /> CS STUDENT</h1>
+
+        <p class="description">
+          Aspiring automation & machine learning enthusiast with a strong interest in the trading markets.
+        </p>
+
+        <div class="buttons">
+          <div class="a-box-git">
+            <a href="https://github.com/Hugebob1" class="btn-get-started">GitHub  )&gt;</a>
+          </div>
+          <div class="a-box-link">
+            <a href="https://www.linkedin.com/in/aleksander-zbyrasz-144778365" class="btn-get-started">Linkedin )&gt;</a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>Flash Cards</h1>
-        <div class="inline">
-          <img src="./images/Flash.png" alt="Flash Cards" />
-          <p>FlashCardApp is a clean, beginner-friendly application written in JavaFX that allows users to learn using flashcards loaded from text files.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>OLX Scanner</h1>
-        <div class="inline">
-          <img src="./images/OLX.webp" alt="Olx Logo" />
-          <p>This project allows you to automatically fetch listings from OLX for the Aprilia RS 660 motorcycle, store them in a local SQLite database, and display the data using a simple web interface built with Flask.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>Desk Master</h1>
-        <div class="inline">
-          <img src="./images/Desk.png" alt="Desk Master" />
-          <p>This is a Desk Reservation Application built using Python and Flask. The app allows users to register, log in, and reserve desks in an office space.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>MyChat</h1>
-        <div class="inline">
-          <img src="./images/Chat.png" alt="Chat" />
-          <p>
-            Privacy-first chat built with Python/Flask plus a bit of JS/HTML/CSS.
-            Supports email allow-list, two-step verification, encrypted text at rest, image uploads, and voice messages.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-wrap reveal-item">
-      <div class="card">
-        <h1>ML</h1>
-        <div class="inline">
-          <img src="./images/ML.jpg" alt="Machine Learning" />
-          <p>An ML model that turns messy, natural-language transaction descriptions into clean spending categories—using text normalization, tokenization, and merchant lookup features.</p>
-        </div>
-      </div>
-    </div>
+    <spline-viewer
+      url="https://prod.spline.design/U7X-QxyJDS80NliC/scene.splinecode"
+      class="bubble"
+    ></spline-viewer>
   </div>
 
   <footer id="contact">
     <p>Copyright © Alex 2026</p>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.77/build/spline-viewer.js"></script>
 
   <!-- GitHub Pages: ścieżka względna -->
   <script src="./index.js" charset="utf-8"></script>
