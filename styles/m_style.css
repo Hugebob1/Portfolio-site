@@ -109,7 +109,7 @@ main{
     min-height: calc(100vh - 16rem);
 }
 .content{
-    max-width: 40rem;
+    max-width: 44rem;
     margin-left: 10%;
     z-index: 999;
 }
@@ -231,7 +231,7 @@ main{
     right: -20%;
     scale: 0.9;
 }
-@media (max-width: 1300px){
+@media (max-width: 1100px){
     header{
         padding: 1rem 0.5rem;
     }
@@ -262,7 +262,7 @@ main{
         margin-top: 25rem;
     }
     .bubble{
-        scale: 0.4;
+        scale: 0.32;
         top: -20%;
     }
     .a-box-link{
@@ -271,11 +271,19 @@ main{
     .a-box-git{
         width: 11rem;
     }
+    .content{
+        margin-left: 0.5rem;
+    }
     .content h1{
-        font-size: 3.5rem;
+        font-size: clamp(1.8rem, 8vw, 3.5rem);
+        letter-spacing: 0;
     }
     .content p{
-        font-size: 1.1rem;
-        padding-right: 2.3rem;
+        font-size: 1.05rem;
+        padding-right: 0.5rem;
+    }
+    .buttons{
+        flex-wrap: wrap;
+        gap: 0 0.75rem;
     }
 }

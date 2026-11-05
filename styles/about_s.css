@@ -80,14 +80,13 @@ nav a:hover{
     background-color: white;
 }
 .main{
-    min-height: calc(100vh - var(--header-h) - var(--footer-h));
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 /* Carousel */
@@ -125,7 +124,7 @@ nav a:hover{
 }
 .item h1{
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
     padding-bottom: 0.7rem;
@@ -249,6 +248,13 @@ body{
     .item{ --w: min(320px, 82vw); height: 500px; }
     .slider{ height: 560px; }
     .arrow{ display: none; }
+}
+
+/* shorter laptop screens: shrink the carousel so the page fits without scrolling */
+@media (max-height: 820px) and (min-width: 801px){
+    .slider{ height: 470px; }
+    .item{ height: 430px; top: 20px; }
+    .item .cover{ height: 110px; }
 }
 
 @media (prefers-reduced-motion: reduce){

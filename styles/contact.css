@@ -81,7 +81,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(90vh - 6rem);
+  min-height: calc(100vh - 16rem);
 }
 
 .content{
@@ -214,7 +214,7 @@ main{
 /* Footer */
 
 /* Responsive */
-@media (max-width: 1300px){
+@media (max-width: 1100px){
 
   header{ padding: 1rem 0.5rem; }
   .content{ margin-top: 6rem; margin-left: 5%; }
@@ -226,16 +226,25 @@ main{
   nav{ display: none; }
   header h1{ font-size: 2rem; }
 
-  .content{ margin-left: 0.8rem; }
+  .content{ margin-left: 0; }
+  .card{ width: 100%; padding: 0.8rem; }
   .content h1{ font-size: 3.2rem; }
   .description{ font-size: 1.05rem; padding-right: 1rem; }
 
+  /* label on its own line, value + button below it */
   .row{
-    grid-template-columns: 84px 1fr;
+    grid-template-columns: 1fr auto;
+    gap: 0.3rem 0.75rem;
   }
-  .copy, .pill{
-    grid-column: 2 / -1;
-    justify-self: start;
-    margin-top: 0.4rem;
+  .label{
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+  }
+  .value{
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+  .copy{
+    padding: 0.45rem 0.8rem;
   }
 }
