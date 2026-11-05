@@ -78,6 +78,7 @@ nav a:hover{
 
 main{
   padding-top: 4rem;
+  padding-bottom: 25vh;
 }
 
 .content{
@@ -122,34 +123,96 @@ main{
 }
 
 /* Timeline */
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .timeline{
+  --progress: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  border-left: 2px solid rgba(255,0,200,0.35);
-  padding-left: 1.5rem;
+  gap: 2rem;
+  padding-left: 2.2rem;
+}
+
+/* dim track + gradient fill that grows with scroll */
+.timeline::before,
+.timeline-fill{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  border-radius: 2px;
+}
+.timeline::before{
+  height: 100%;
+  background: rgba(255,255,255,0.12);
+}
+.timeline-fill{
+  height: calc(var(--progress) * 100%);
+  background: linear-gradient(to bottom, #cc00ff, #ff3bd4, #33e6d0);
+  box-shadow: 0 0 12px rgba(255, 59, 212, 0.7);
 }
 
 .job{
   position: relative;
   border-radius: 22px;
-  padding: 1.5rem;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 0 20px rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
+  padding: 1.6rem 1.8rem;
+  border: 2px solid rgba(255,255,255,0.10);
+  background: #1a1f38;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  transform-origin: left center;
+  transition:
+    transform .6s cubic-bezier(.22,.61,.36,1),
+    opacity .6s ease,
+    background-color .6s ease,
+    box-shadow .6s ease;
 }
 
+/* timeline dot */
 .job::before{
   content: '';
   position: absolute;
-  left: calc(-1.5rem - 7px);
+  left: calc(-2.2rem - 8px);
   top: 2rem;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: #ff00c8;
-  box-shadow: 0 0 10px #ff00c8;
+  background: #2b3157;
+  border: 2px solid #0f1222;
+  transition: background-color .4s ease, box-shadow .4s ease, transform .4s ease;
+}
+.job.is-passed::before{
+  background: #ff3bd4;
+}
+
+/* Scroll-driven focus: only when JS is running */
+.timeline.is-interactive .job{
+  opacity: 0.55;
+  transform: scale(0.97);
+}
+.timeline.is-interactive .job.is-active{
+  opacity: 1;
+  transform: scale(1.02);
+  border-color: transparent;
+  background:
+    linear-gradient(160deg, #232a4d, #1a1f38) padding-box,
+    conic-gradient(from var(--angle), #33e6d0, #cc00ff, #ffffff, #cc00ff, #33e6d0) border-box;
+  box-shadow: 0 0 40px rgba(204, 0, 255, 0.25), 0 0 90px rgba(51, 230, 208, 0.10);
+  animation: spin 6s linear infinite;
+}
+.timeline.is-interactive .job.is-active::before{
+  background: #33e6d0;
+  transform: scale(1.3);
+  box-shadow: 0 0 0 6px rgba(51, 230, 208, 0.18), 0 0 16px #33e6d0;
+}
+
+@keyframes spin{
+  to{ --angle: 360deg; }
 }
 
 .job-head{
@@ -163,16 +226,17 @@ main{
 .job h2{
   font-size: 1.5rem;
   font-weight: 600;
+  color: #fff;
 }
 
 .date{
-  color: #a7a7a7;
+  color: #b4b9d2;
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
 .company{
-  color: #ff00ff;
+  color: #ff7be6;
   margin: 0.2rem 0 0.8rem;
 }
 
@@ -181,16 +245,20 @@ main{
 }
 
 .job > p{
-  color: #bdbdbd;
+  color: #cfd3e6;
 }
 
 .job ul{
   margin: 0.8rem 0 0 1.2rem;
-  color: #bdbdbd;
+  color: #cfd3e6;
 }
 
 .job li{
   margin-bottom: 0.3rem;
+}
+
+.job li::marker{
+  color: #ff3bd4;
 }
 
 .tags{
@@ -204,14 +272,22 @@ main{
   font-size: 0.8rem;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.10);
+  color: #eceef6;
 }
 
-footer{
-  height: var(--footer-h);
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  margin: 0;
+@media (prefers-reduced-motion: reduce){
+  .job, .job::before{ transition: none; }
+  .timeline.is-interactive .job{ opacity: 1; transform: none; }
+  .timeline.is-interactive .job.is-active{ transform: none; animation: none; }
+}
+
+/* Experience page sits on a slightly lighter backdrop */
+body.page-experience{
+  background:
+    radial-gradient(900px 600px at 0% 10%, rgba(120, 80, 255, 0.16), transparent 70%),
+    radial-gradient(700px 500px at 100% 70%, rgba(51, 230, 208, 0.08), transparent 70%),
+    #121528;
 }
 
 /* Responsive */

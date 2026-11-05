@@ -44,6 +44,6 @@ function setDelays(items, open) {
 }
 
 
-document.querySelector("footer p").textContent = "Copyright © Alex " + new Date().getFullYear();
+document.querySelector("footer p").textContent = "© " + new Date().getFullYear() + " Aleksander Zbyrasz";
 
 

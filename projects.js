@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.querySelector("footer p").textContent = "Copyright © Alex " + new Date().getFullYear();
+document.querySelector("footer p").textContent = "© " + new Date().getFullYear() + " Aleksander Zbyrasz";
 
 $("h1").fadeOut(1).fadeIn(2000);
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Graph Splitter": "https://github.com/Hugebob1/GrafMasterJava",
     "OLX Scanner": "https://github.com/Hugebob1/Olx_Scanner",
     "MyChat": "https://github.com/Hugebob1/MyChat",
-    "ML": "https://github.com/Hugebob1/ML-project"
+    "Spending Classifier": "https://github.com/Hugebob1/ML-project"
   };
 
   document.querySelectorAll('.container .card').forEach(card => {
