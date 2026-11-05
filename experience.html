@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | ALEXZ</title>
+
+  <!-- GitHub Pages: ścieżki względne -->
+  <link rel="stylesheet" href="./styles/experience.css" />
+</head>
+<body>
+  <img class="image-gradient" src="./images/gradient.png" alt="gradient" />
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <h1 class="logo">ALEXZ</h1>
+
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./experience.html">Experience</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content">
+        <div class="tag-box">
+          <div class="tag">EXPERIENCE &wedbar;</div>
+        </div>
+
+        <h1>WHERE I WORK</h1>
+
+        <div class="timeline">
+          <article class="job">
+            <div class="job-head">
+              <h2>Hyperautomation Developer</h2>
+              <span class="date">May 2026 – present</span>
+            </div>
+            <p class="company">Bosch · Hyperautomation Hub · Warsaw</p>
+            <p>
+              I design and build end-to-end business process automations and AI-driven workflows.
+            </p>
+            <ul>
+              <li>Production workflows in n8n, including custom nodes that connect enterprise systems and LLM gateways</li>
+              <li>AI agents and agentic pipelines with RAG, LLM reasoning and human-in-the-loop approval steps</li>
+              <li>Document-heavy automations: PDF extraction, rule-based parsing with an AI fallback and structured Excel output</li>
+              <li>ML + LLM data classification in KNIME, with a human-review interface for low-confidence cases</li>
+              <li>Proof-of-concept demos and presentations for management</li>
+            </ul>
+            <div class="tags">
+              <span>n8n</span><span>Python</span><span>LLMs</span><span>RAG / Qdrant</span><span>KNIME</span><span>REST APIs</span>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h2>Co-founder &amp; CEO</h2>
+              <span class="date">Jul 2026 – present</span>
+            </div>
+            <p class="company">
+              Curio sp. z o.o. · Warsaw ·
+              <a href="https://e-curio.pl" target="_blank" rel="noreferrer">e-curio.pl</a>
+            </p>
+            <p>
+              An education company I co-founded with Mateusz Szot. We run small-group classes in mathematics
+              (including matura preparation), logical thinking, chess and French for children and teens, and we teach them ourselves.
+              Besides teaching, I run the company and built its technical backbone.
+            </p>
+            <ul>
+              <li>Website built with Next.js, FastAPI and Supabase, self-hosted on my own Linux server (nginx, Cloudflare Tunnel)</li>
+              <li>Double-entry bookkeeping system written in Python and SQLite</li>
+              <li>Company registration, tax and compliance setup, business email, DNS and SEO</li>
+            </ul>
+            <div class="tags">
+              <span>Next.js</span><span>FastAPI</span><span>Supabase</span><span>Linux</span><span>Python</span>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h2>Programming Instructor</h2>
+              <span class="date">~4 months</span>
+            </div>
+            <p class="company">Giganci Programowania</p>
+            <p>
+              Taught programming to children and teenagers in group classes, until I joined Bosch.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © Alex 2026</p>
+  </footer>
+
+  <script>
+    document.querySelector("footer p").textContent = "Copyright © Alex " + new Date().getFullYear();
+  </script>
+</body>
+</html>

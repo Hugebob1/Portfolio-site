@@ -64,7 +64,8 @@ nav a:hover{
     color: #ff00c8;
     opacity: 0.8;
 }
-.btn-signing{ 
+.btn-signing{
+    text-decoration: none;
     background-color: #a7a7a7;
     color: black;
     padding: 0.8rem 2rem;
