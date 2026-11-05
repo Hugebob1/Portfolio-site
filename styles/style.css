@@ -139,19 +139,38 @@ h1{
 }
 .section-title{
   color: white;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
-  padding: 2rem 2rem 0 5rem;
+  letter-spacing: 0.05rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+  box-sizing: border-box;
 }
-.card-main{
+/* Fluid grid: as many ~300px cards per row as fit */
+#main-projects,
+#other-projects{
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.card.card-main{
+  width: auto;
+  margin: 0;
+  padding: 1.5em;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  height: calc(100% - 4em);
+  gap: 0.7rem;
+  height: calc(100% - 3em);
+  font-size: 0.95rem;
 }
-.card-main h1{
+.card.card-main h1{
+  font-size: 1.6rem;
   margin-bottom: 0;
   align-self: flex-start;
 }
@@ -176,8 +195,8 @@ h1{
 /* Cover image on top of each project card */
 .cover{
   position: relative;
-  height: 170px;
-  margin: -2em -2em 0.4rem;
+  height: 150px;
+  margin: -1.5em -1.5em 0.3rem;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   background: #1f2440;

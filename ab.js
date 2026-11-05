@@ -38,6 +38,9 @@ function loadShow(){
     });
 
     dots.forEach((dot, i) => dot.classList.toggle('active', i === active));
+
+    // page glow follows the colour of the active card
+    document.body.style.setProperty('--tint', items[active].dataset.tint);
 }
 
 function goTo(i){

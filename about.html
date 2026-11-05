@@ -12,6 +12,7 @@
 <body>
   <img class="image-gradient" src="./images/gradient.png" alt="gradient" />
   <div class="layer-blur"></div>
+  <div class="about-tint"></div>
 
   <header>
     <h1 class="logo">ALEXZ</h1>
@@ -29,34 +30,106 @@
 
   <div class="main">
     <div class="slider">
-      <div class="item">
+      <div class="item" data-tint="#7c4dff">
+        <div class="cover cover--edu">
+          <svg viewBox="0 0 340 140" aria-hidden="true">
+            <path d="M104 64 L166 34 L228 64 Z" fill="#4a5288"/>
+            <rect x="108" y="64" width="116" height="8" fill="#353c6b"/>
+            <g fill="#2b3157"><rect x="120" y="76" width="14" height="36"/><rect x="146" y="76" width="14" height="36"/><rect x="172" y="76" width="14" height="36"/><rect x="198" y="76" width="14" height="36"/></g>
+            <rect x="102" y="114" width="128" height="10" rx="2" fill="#4a5288"/>
+            <g transform="translate(236 30) rotate(12)">
+              <path d="M0 14 L30 2 L60 14 L30 26 Z" fill="#ff3bd4"/>
+              <path d="M13 19 v12 c0 6 34 6 34 0 V19" fill="#c02aa6"/>
+              <path d="M54 16 v18" stroke="#33e6d0" stroke-width="3"/>
+              <circle cx="54" cy="37" r="4" fill="#33e6d0"/>
+            </g>
+          </svg>
+        </div>
         <h1>Education</h1>
         I'm a third-year Applied Computer Science student at Warsaw University of Technology.
         Before that, I graduated from Tadeusz Reytan High School in the math–informatics profile.
       </div>
 
-      <div class="item">
+      <div class="item" data-tint="#ff3bd4">
+        <div class="cover cover--build">
+          <svg viewBox="0 0 340 140" aria-hidden="true">
+            <g fill="none" stroke-width="2.5">
+              <path d="M96 70 C126 70 126 44 152 44" stroke="#ff3bd4"/>
+              <path d="M96 70 C126 70 126 96 152 96" stroke="#33e6d0"/>
+              <path d="M200 44 C224 44 224 70 246 70" stroke="#ff3bd4"/>
+              <path d="M200 96 C224 96 224 70 246 70" stroke="#33e6d0"/>
+            </g>
+            <g fill="#1f2440" stroke="rgba(255,255,255,.25)" stroke-width="2">
+              <rect x="52" y="52" width="44" height="36" rx="10"/>
+              <rect x="152" y="28" width="48" height="32" rx="10"/>
+              <rect x="152" y="80" width="48" height="32" rx="10"/>
+              <rect x="246" y="52" width="44" height="36" rx="10"/>
+            </g>
+            <path d="M74 60 v20 M64 70 h20" stroke="#eceef6" stroke-width="3" stroke-linecap="round"/>
+            <path d="M176 34 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z" fill="#ff3bd4"/>
+            <rect x="164" y="91" width="24" height="4" rx="2" fill="#33e6d0"/><rect x="164" y="99" width="16" height="4" rx="2" fill="#4a5288"/>
+            <path d="M259 70 l6 6 12 -13" fill="none" stroke="#33e6d0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h1>What I Build</h1>
         I build automations and AI-powered pipelines that remove manual work: LLM and VLM pipelines,
         AI agents, RAG, workflow automation and web automation. I enjoy creating things from scratch
         that help people in their daily tasks.
       </div>
 
-      <div class="item">
+      <div class="item" data-tint="#33e6d0">
+        <div class="cover cover--teach">
+          <svg viewBox="0 0 340 140" aria-hidden="true">
+            <rect x="66" y="20" width="208" height="100" rx="8" fill="#1f2440" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+            <text x="88" y="62" fill="#eceef6" font-size="24" font-family="Georgia, serif" font-style="italic">a² + b² = c²</text>
+            <path d="M88 82 h86" stroke="#ff3bd4" stroke-width="3" stroke-linecap="round"/>
+            <path d="M88 96 h52" stroke="#4a5288" stroke-width="3" stroke-linecap="round"/>
+            <path d="M206 104 L252 104 L252 70 Z" fill="rgba(51,230,208,.12)" stroke="#33e6d0" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M244 104 v-8 h8" fill="none" stroke="#33e6d0" stroke-width="2"/>
+            <path d="M150 120 l-14 18 M190 120 l14 18" stroke="#4a5288" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h1>Teaching</h1>
         I've been teaching mathematics and computer science for about 3 years, from primary school
         up to matura level. I also worked as a programming instructor, and today I teach small groups
         at Curio, the education company I co-founded.
       </div>
 
-      <div class="item">
+      <div class="item" data-tint="#3b82f6">
+        <div class="cover cover--skills">
+          <svg viewBox="0 0 340 140" aria-hidden="true">
+            <rect x="76" y="18" width="188" height="108" rx="10" fill="#1f2440" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+            <path d="M77 40 h186" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+            <circle cx="92" cy="29" r="4" fill="#ff3bd4"/><circle cx="105" cy="29" r="4" fill="#cc00ff"/><circle cx="118" cy="29" r="4" fill="#33e6d0"/>
+            <text x="92" y="66" fill="#33e6d0" font-size="14" font-family="ui-monospace, Menlo, monospace">$ python agent.py</text>
+            <rect x="92" y="78" width="120" height="6" rx="3" fill="#4a5288"/>
+            <rect x="92" y="92" width="86" height="6" rx="3" fill="#353c6b"/>
+            <rect x="92" y="106" width="9" height="12" fill="#ff3bd4"/>
+          </svg>
+        </div>
         <h1>Skills</h1>
         <b>Automation &amp; AI:</b> n8n, LLM/VLM pipelines, AI agents, RAG, MCP, Ollama, Hugging Face, KNIME.<br />
         <b>Programming:</b> Python, JavaScript/TypeScript, Next.js, FastAPI, SQL.<br />
         <b>Data &amp; web:</b> Selenium, pandas, Supabase, SQLite.
       </div>
 
-      <div class="item">
+      <div class="item" data-tint="#a3e635">
+        <div class="cover cover--sport">
+          <svg viewBox="0 0 340 140" aria-hidden="true">
+            <defs><clipPath id="racket-head"><ellipse cx="150" cy="58" rx="31" ry="39"/></clipPath></defs>
+            <g transform="rotate(-28 150 80)">
+              <g clip-path="url(#racket-head)" stroke="rgba(255,255,255,.35)" stroke-width="1.5">
+                <path d="M126 10 v100 M138 10 v100 M150 10 v100 M162 10 v100 M174 10 v100"/>
+                <path d="M100 34 h100 M100 46 h100 M100 58 h100 M100 70 h100 M100 82 h100"/>
+              </g>
+              <ellipse cx="150" cy="58" rx="34" ry="42" fill="none" stroke="#eceef6" stroke-width="5"/>
+              <rect x="146" y="100" width="8" height="12" fill="#eceef6"/>
+              <rect x="145" y="110" width="10" height="34" rx="4" fill="#ff3bd4"/>
+            </g>
+            <circle cx="236" cy="88" r="20" fill="#c8f048"/>
+            <path d="M220 76 q14 12 0 26 M252 74 q-14 14 0 28" fill="none" stroke="#f4f9e0" stroke-width="2.5"/>
+          </svg>
+        </div>
         <h1>Sports</h1>
         I played tennis for about 11 years, earlier at a professional level, which taught me discipline
         and a competitive mindset. Now I play for fun and go to the gym regularly.
